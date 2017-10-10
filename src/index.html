@@ -7,6 +7,45 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type="text/javascript" src="assets/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="assets/libs/js-xlsx/xlsx.core.min.js"></script>
+  <script type="text/javascript" src="assets/libs/FileSaver/FileSaver.min.js"></script>
+  <script type="text/javascript" src="assets/libs/html2canvas/html2canvas.min.js"></script>
+  <script type="text/javascript" src="assets/tableExport.js"></script>
+  <script type="text/javaScript">
+    var sFileName = 'ngophi';
+    function ExportXLSX(){
+      $('#Event').tableExport({fileName: sFileName,
+        type: 'xlsx'
+      });
+    }
+  </script>
+  <style type="text/css">
+    body {
+      font-size: 12pt;
+      font-family: Calibri;
+      padding : 10px;
+    }
+    table {
+      border: 1px solid black;
+    }
+    th {
+      border: 1px solid black;
+      padding: 5px;
+      background-color:grey;
+      color: white;
+    }
+    td {
+      border: 1px solid black;
+      padding: 5px;
+    }
+    input {
+      font-size: 12pt;
+      font-family: Calibri;
+    }
+  </style>
+
 </head>
 <body>
   <app-root></app-root>
